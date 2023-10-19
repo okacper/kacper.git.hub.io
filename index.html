@@ -13,12 +13,9 @@
     <meta name="Robots" content="disallow">
     <title>łaszczowieckajadalnia</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-</head>
-<body>
     <style>
         body {
-            font-family: Arial, sans-serif;
-		background-image: url(zdjecie.png);
+            font-family: 'Lato', Arial, sans-serif;
         }
         header {
             background-color: #ffffff;
@@ -55,7 +52,6 @@
             border-collapse: collapse;
             border-radius: 10px;
             overflow: hidden;
-            margin-top: 0px;
         }
         th, td {
             padding: 10px;
@@ -90,53 +86,45 @@
         .naglowek {
             text-align: center;
         }
+        .torcik {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
+    <div class="autosora">
+        <img src="zdjecie.png" width="40%" height="60%">
+    </div>
     <section>
         <h2 class="header2">Samochody</h2>
-            <thead>   
-                 <html>
-<head>
-    <table class="tabelazdjecia">
-        <section id="video-container">
-        <tr>
-            <td rowspan="2"><iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100038756511179%2Fvideos%2F690985369609329%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe></td>
-            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/JZBKm2BVUL4" frameborder="0" allowfullscreen></iframe></td>
-        </tr>
-        <tr>
-            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/CA8MH56GKiU?si=EDzdfEtk-d1mK8jl" frameborder="0" allowfullscreen></iframe></td>
-        </tr>
-    </section>
-    </table>
-    <div class="center-container">
-        <h2 class="naglowek">Ulubiona piosenka</h2>
-        <audio controls autoplay>
-            <source src="SKOLIM - Temperatura (Official Video).mp3" type="audio/mp3">
-            Twoja przeglądarka nie obsługuje odtwarzacza audio.
-        </audio>
-    </div>
+        <table class="tabelazdjecia">
+            <tr>
+                <td rowspan="2"><iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100038756511179%2Fvideos%2F690985369609329%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe></td>
+                <td><iframe width="560" height="315" src="https://www.youtube.com/embed/JZBKm2BVUL4" frameborder="0" allowfullscreen></iframe></td>
+            </tr>
+            <tr>
+                <td><iframe width="560" height="315" src="https://www.youtube.com/embed/CA8MH56GKiU?si=EDzdfEtk-d1mK8jl" frameborder="0" allowfullscreen></iframe></td>
+            </tr>
+        </table>
+        <div class="center-container">
+            <h2 class="naglowek">Ulubiona piosenka</h2>
+            <audio controls autoplay>
+                <source src="SKOLIM - Temperatura (Official Video).mp3" type="audio/mp3">
+                Twoja przeglądarka nie obsługuje odtwarzacza audio.
+            </audio>
+        </div>
     </section>
     <footer>
         <p>© 2023 Kacper Oleńczuk</p>
         <p>Data: <span id="currentDate"></span></p>
     </footer>
-    <script>
-
-function aktualizujDate() {
-			const currentDateElement = document.getElementById("currentDate");
-			const aktualnaData = new Date();
-			currentDateElement.textContent = aktualnaData.toLocaleDateString() + " " + aktualnaData.toLocaleTimeString();
-		}
-
-		// Wywołanie funkcji aktualizującej datę na początku
-		aktualizujDate();
-
-		// Ustawienie interwału, aby odświeżać datę co sekundę
-		setInterval(aktualizujDate, 1000);
-	
-</script>
-</body>
-</html>
+    <div class="torcik">
+        <img src="torcik.png" usemap="#swieczki">
+    </div>
+    <map name="swieczki">
+        <area shape="rect" coords="157,23,247,159" href="https://d-art.ppstatic.pl/kadry/k/r/1/1c/a5/63cfb77928d02_o_large.jpg" target="_blank" alt="Pisowska Świeczka 1">
+        <area shape="circle" coords="686,132,50" href="https://d-art.ppstatic.pl/kadry/k/r/1/3d/f2/63cfb76ede58f_o_large.jpg" target="_blank" alt="Pisowska Świeczka 2">
+        <area shape="poly" coords="396,390,171,314,436,270,503,315,480,390" href="https://d-art.ppstatic.pl/kadry/k/r/1/17/8f/63cfb77fc0381_o_large.jpg" target="_blank" alt="Pisowska Świeczka 3">
+    </map>
 </body>
 </html>
