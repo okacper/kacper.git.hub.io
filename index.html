@@ -1,130 +1,122 @@
+
+
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="Content-Language" content="pl">
-    <meta name="Reply-to" content="olenczukacper@gmail.com">
-    <meta name="Title" content="łaszczowiecki browar">
-    <meta name="page-topic" content="łaszczowiecki browar">
-    <meta name="Creation_Date" content="2023-09-12">
-    <meta name="Keywords" content="łaszczów łaszczó browar łaszczów">
-    <meta name="Description" content="jkhhjk">
-    <meta name="Robots" content="disallow">
-    <title>łaszczowieckajadalnia</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Kreatywna Strona</title>
     <style>
         body {
-            font-family: 'Lato', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
-        header {
-            background-color: #ffffff;
-            color: #000000;
-            padding: 10px;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 10px;
-        }
-        section {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        footer {
-            background-color: #000000;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            font-size: 11px;
-            margin-top: 30px;
-        }
-        table {
-            width: 80%;
-            margin: 0 auto;
-            border-collapse: collapse;
+
+        .container {
+            width: 60%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
             border-radius: 10px;
-            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
-        th, td {
+
+        h1 {
+            color: #3498db;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input,
+        textarea {
             padding: 10px;
-            text-align: center;
+            margin-bottom: 15px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            font-size: 16px;
         }
-        th {
-            background-color: #da24eb;
-            color: white;
+
+        textarea {
+            resize: none;
         }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+
+        button {
+            padding: 10px;
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-        tr:nth-child(odd) {
-            background-color: #e5e5e5;
+
+        button:hover {
+            background-color: #27ae60;
         }
-        td:first-child {
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
+
+        .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
         }
-        td:last-child {
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
         }
-        .header2 {
-            text-align: center;
-            font-size: 40px;
-            margin-top: 50px;
-        }
-        .autosora {
-            text-align: center;
-        }
-        .naglowek {
-            text-align: center;
-        }
-        .torcik {
-            text-align: center;
+
+        .checkbox-group input {
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="autosora">
-        <img src="zdjecie.png" width="40%" height="60%">
+    <div class="container">
+        <h1>Moja Kreatywna Strona</h1>
+        <form action="#" method="post">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Numer telefonu:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" name="option1"> mężczyzna
+                </label>
+                <label>
+                    <input type="checkbox" name="option2"> kobieta
+                </label>
+                <label>
+                    <input type="checkbox" name="option3"> nie chcę podawać
+                </label>
+            </div>
+
+            <button type="submit">Wyślij</button>
+        </form>
     </div>
-    <section>
-        <h2 class="header2">Samochody</h2>
-        <table class="tabelazdjecia">
-            <tr>
-                <td rowspan="2"><iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100038756511179%2Fvideos%2F690985369609329%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe></td>
-                <td><iframe width="560" height="315" src="https://www.youtube.com/embed/JZBKm2BVUL4" frameborder="0" allowfullscreen></iframe></td>
-            </tr>
-            <tr>
-                <td><iframe width="560" height="315" src="https://www.youtube.com/embed/CA8MH56GKiU?si=EDzdfEtk-d1mK8jl" frameborder="0" allowfullscreen></iframe></td>
-            </tr>
-        </table>
-        <div class="center-container">
-            <h2 class="naglowek">Ulubiona piosenka</h2>
-            <audio controls autoplay>
-                <source src="SKOLIM - Temperatura (Official Video).mp3" type="audio/mp3">
-                Twoja przeglądarka nie obsługuje odtwarzacza audio.
-            </audio>
-        </div>
-    </section>
-    <footer>
-        <p>© 2023 Kacper Oleńczuk</p>
-        <p>Data: <span id="currentDate"></span></p>
-    </footer>
-    <div class="torcik">
-        <img src="torcik.png" usemap="#swieczki">
-    </div>
-    <map name="swieczki">
-        <area shape="rect" coords="157,23,247,159" href="https://d-art.ppstatic.pl/kadry/k/r/1/1c/a5/63cfb77928d02_o_large.jpg" target="_blank" alt="Pisowska Świeczka 1">
-        <area shape="circle" coords="686,132,50" href="https://d-art.ppstatic.pl/kadry/k/r/1/3d/f2/63cfb76ede58f_o_large.jpg" target="_blank" alt="Pisowska Świeczka 2">
-        <area shape="poly" coords="396,390,171,314,436,270,503,315,480,390" href="https://d-art.ppstatic.pl/kadry/k/r/1/17/8f/63cfb77fc0381_o_large.jpg" target="_blank" alt="Pisowska Świeczka 3">
-    </map>
 </body>
 </html>
