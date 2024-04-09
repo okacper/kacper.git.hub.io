@@ -3,63 +3,52 @@
 <head>
     <title>Twoja Strona</title>
     <style>
-        #container {
-            width: 100%;
-            height: 100vh;
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-        }
-        #header {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding: 20px;
-            background-color: #0000FF; /* Niebieski */
-        }
-        #banner {
-            width: 100%;
-            height: 200px;
-            background-color: #008000; /* Zielony */
-            display: flex;
             justify-content: center;
-            align-items: center;
+            height: 100vh;
+            background: linear-gradient(120deg, #0000FF, #008000, #FFA500, #FF0000);
+            background-size: 800% 800%;
+            animation: Gradient 15s ease infinite;
         }
-        #main-block {
-            flex-grow: 1;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #FFA500; /* Pomarańczowy */
+
+        @keyframes Gradient {
+            0% {background-position: 0% 50%}
+            50% {background-position: 100% 50%}
+            100% {background-position: 0% 50%}
         }
-        #footer {
-            width: 100%;
-            padding: 20px;
-            background-color: #FF0000; /* Czerwony */
-            display: flex;
-            justify-content: center;
+
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            color: white;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: white;
+            color: black;
         }
     </style>
 </head>
 <body>
-    <!-- KONTENER CAŁEJ STRONY -->
-    <div id="container">
-        <!-- bloki logo i menu -->
-        <div id="header">
-            <div id="logo">Logo</div>
-            <div id="menu">Menu</div>
-        </div>
-        
-        <!-- BANER -->
-        <div id="banner">Baner</div>
-        
-        <!-- BLOK GŁÓWNY -->
-        <div id="main-block">Blok główny</div>
-        
-        <!-- STOPKA -->
-        <div id="footer">Stopka</div>
-    </div>
+    <button id="animate">Losuj animację</button>
+
+    <script>
+        document.getElementById('animate').addEventListener('click', function() {
+            var animations = ['bounce', 'flash', 'pulse', 'rubberBand', 'shake', 'headShake', 'swing', 'tada', 'wobble', 'jello'];
+            var animation = animations[Math.floor(Math.random() * animations.length)];
+            this.style.animation = animation + ' 2s linear';
+        });
+    </script>
 </body>
 </html>
