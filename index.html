@@ -1,86 +1,64 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wesołych Świąt Wielkanocnych!</title>
-  <style>
-    body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background-color: #fff3e0;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    #header {
-      background-image: linear-gradient(to right, #ffafbd, #ffc3a0);
-      padding: 40px;
-      color: #fff;
-      text-shadow: 2px 2px 4px #000000;
-    }
-    #inputContainer {
-      margin-top: 50px;
-      padding: 20px;
-    }
-    input[type="text"] {
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 20px;
-      border: 2px solid #87CEEB;
-      outline: none;
-    }
-    #submitButton {
-      padding: 15px 30px;
-      background-color: #87CEEB;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-size: 18px;
-      border-radius: 20px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-    }
-    #submitButton:hover {
-      background-color: #68b0ab;
-    }
-    #footer {
-      background-color: #87CEEB;
-      color: #fff;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      padding: 10px;
-      font-size: 14px;
-    }
-  </style>
+    <title>Twoja Strona</title>
+    <style>
+        #container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        #banner {
+            width: 100%;
+            height: 200px;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main-block {
+            flex-grow: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #footer {
+            width: 100%;
+            padding: 20px;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-  <div id="header">
-    <h1>Wesołych Świąt Wielkanocnych!</h1>
-  </div>
-  <div id="inputContainer">
-    <label for="name">Wpisz swoje imię: </label>
-    <input type="text" id="name" placeholder="Twoje imię...">
-    <br><br>
-    <button id="submitButton">Kliknij</button>
-  </div>
-
-  <div id="footer">
-    <p>Stworzone z miłością dla świąt Wielkanocnych</p>
-  </div>
-
-  <script>
-    document.getElementById("submitButton").onclick = function() {
-      var name = document.getElementById("name").value;
-      if (name.trim() !== "") {
-        var gender = name.toLowerCase() === "kuba" ? "chłopaki" : (name.toLowerCase().endsWith("a") ? "dziewczynko" : "chłopaki");
-        // Przekierowanie na stronę z życzeniem
-        window.location.href = "zyczenia.html?name=" + encodeURIComponent(name) + "&gender=" + encodeURIComponent(gender);
-      } else {
-        alert("Proszę wpisać swoje imię.");
-      }
-    };
-  </script>
+    <!-- KONTENER CAŁEJ STRONY -->
+    <div id="container">
+        <!-- bloki logo i menu -->
+        <div id="header">
+            <div id="logo">Logo</div>
+            <div id="menu">Menu</div>
+        </div>
+        
+        <!-- BANER -->
+        <div id="banner">Baner</div>
+        
+        <!-- BLOK GŁÓWNY -->
+        <div id="main-block">Blok główny</div>
+        
+        <!-- STOPKA -->
+        <div id="footer">Stopka</div>
+    </div>
 </body>
 </html>
