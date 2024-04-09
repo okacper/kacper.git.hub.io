@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twoja Strona</title>
+    <style>
+        #container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+            background-color: #0000FF; /* Niebieski */
+        }
+        #banner {
+            width: 100%;
+            height: 200px;
+            background-color: #008000; /* Zielony */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main-block {
+            flex-grow: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFA500; /* Pomarańczowy */
+        }
+        #footer {
+            width: 100%;
+            padding: 20px;
+            background-color: #FF0000; /* Czerwony */
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- KONTENER CAŁEJ STRONY -->
+    <div id="container">
+        <!-- bloki logo i menu -->
+        <div id="header">
+            <div id="logo">Logo</div>
+            <div id="menu">Menu</div>
+        </div>
+        
+        <!-- BANER -->
+        <div id="banner">Baner</div>
+        
+        <!-- BLOK GŁÓWNY -->
+        <div id="main-block">Blok główny</div>
+        
+        <!-- STOPKA -->
+        <div id="footer">Stopka</div>
+    </div>
+</body>
+</html>
