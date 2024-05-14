@@ -1,69 +1,38 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Życzenia Wielkanocne</title>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #e7e9eb;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: #5d5c61;
-      text-shadow: 2px 2px 4px #bfbfbf;
-    }
-    p {
-      font-size: 24px;
-      color: #333333;
-    }
-    .container {
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .footer {
-      font-size: 14px;
-      color: #5d5c61;
-      margin-top: 100px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Układ strony</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .header {
+            background-color: red;
+            height: 50px;
+        }
+        .container {
+            display: flex;
+            height: calc(100% - 50px);
+        }
+        .left-section {
+            background-color: blue;
+            width: 30%;
+        }
+        .right-section {
+            background-color: green;
+            width: 70%;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1 id="greeting"></h1>
-    <p id="message"></p>
-  </div>
-
-  <div class="footer">
-    <p>Stworzone z nadzieją na radosne i spokojne święta.</p>
-  </div>
-
-  <script>
-    window.onload = function() {
-      var params = new URLSearchParams(window.location.search);
-      var name = params.get('name');
-      var gender = params.get('gender');
-      var greeting = document.getElementById('greeting');
-      var message = document.getElementById('message');
-
-      if (gender === "dziewczynko") {
-        greeting.textContent = "Wesołych Świąt, Pani " + name + "!";
-        message.textContent = "Niech ta Wielkanoc przyniesie Pani wiele radości i szczęścia, Pani Nauczycielko!";
-      } else {
-        greeting.textContent = "Wesołych Świąt, Panie " + name + "!";
-        message.textContent = "Życzę Panu wiele radości i szczęścia w te święta Wielkanocne, Panie Nauczycielu!";
-      }
-    };
-  </script>
+    <div class="header"></div>
+    <div class="container">
+        <div class="left-section"></div>
+        <div class="right-section"></div>
+    </div>
 </body>
 </html>
